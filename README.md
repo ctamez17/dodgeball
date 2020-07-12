@@ -1,9 +1,9 @@
 ## How To Run
-# ! To run DOM !
+### ! To run DOM !
 1. Ensure that the following is commented out (on line 1 of main.js):
 // let assert = require("assert");
 
-# ! To run Tests !
+### ! To run Tests !
 1. Ensure that the following is NOT commented out (on line 1 of main.js):
 // let assert = require("assert");
 
