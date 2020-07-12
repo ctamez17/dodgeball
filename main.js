@@ -1,3 +1,5 @@
+// let assert = require("assert");
+
 const arrOfPeople = [
     {
       id: 1,
@@ -55,7 +57,7 @@ class player {
   }
 }
 
-class blueTeammate {
+class BlueTeammate {
   constructor(id, name, age, skillSet, canThrowBall, canDodgeBall, hasPaid, isHealthy, yearsExperience){
     this.id = id;
     this.name = name;
@@ -71,7 +73,7 @@ class blueTeammate {
   }
 }
 
-class redTeammate {
+class RedTeammate {
   constructor(id, name, age, skillSet, canThrowBall, canDodgeBall, hasPaid, isHealthy, yearsExperience){
     this.id = id;
     this.name = name;
@@ -153,11 +155,17 @@ const makePlayer = (id) => {
   console.log(`li ${id} was clicked!`)
 }
 
+//1st test function
+const testFunction = () => {
+  if(arrOfPeople.length > 0){
+    return true;
+  }
+}
+
 //-----------------------------------------------------------
 //-------------------- ADD TO RED TEAM ----------------------
 //-----------------------------------------------------------
 
-//Create New Red Teammate
 const addToRed = (id) => {
   const listElement = document.getElementById('red');
   const li = document.createElement("li")
@@ -169,7 +177,7 @@ const addToRed = (id) => {
   }
 
   let player = listOfPlayers[index];
-  const newRedPlayer = new redTeammate (
+  const newRedPlayer = new RedTeammate (
     player.id,
     player.name,
     player.age,
@@ -182,6 +190,7 @@ const addToRed = (id) => {
   )
 
   redTeam.push(newRedPlayer);
+
   //remove player from Dodge Ball Players
   listOfPlayers.splice(index, 1)
   
@@ -198,7 +207,6 @@ const addToRed = (id) => {
 //-------------------- ADD TO BLUE TEAM ---------------------
 //-----------------------------------------------------------
 
-//Create New Blue Teammate
 const addToBlue = (id) => {
   const listElement = document.getElementById('blue');
   const li = document.createElement("li")
@@ -210,7 +218,7 @@ const addToBlue = (id) => {
   }
 
   let player = listOfPlayers[index];
-  const newBluePlayer = new blueTeammate (
+  const newBluePlayer = new BlueTeammate (
     player.id,
     player.name,
     player.age,
@@ -235,8 +243,6 @@ const addToBlue = (id) => {
   console.log(`li ${id} was clicked!`)
 }
 
-
-
 //-----------------------------------------------------------
 //-------------------- UNIT TESTS ---------------------------
 //-----------------------------------------------------------
@@ -244,8 +250,39 @@ const addToBlue = (id) => {
 // You use them run the command: npm test main.js
 // to close them ctrl + C
 // most are notes for human eyes to read, but essentially passes in inputs then compares if the function you built return the expected output.
-describe('#makePlayer()', () => {
+
+describe('#testfunction()', () => {
   it('Show Valid Player', () => {
-    assert.equal(makePlayer('x'), "Invalid Player");
+    assert.equal(testFunction(), true);
   });
 });
+
+// describe('#addToRedTeam()', () => {
+//   it('Adds player to Red Team', () => {
+//     assert.equal(addToRed(), true);
+//   });
+// });
+
+if (typeof describe === "function") {
+  describe("Red Team Member", function() {
+    it("should have a id, name, age, skillset.", function() {
+      var redTeammate = new RedTeammate(16, "Rick Martinez", 32, "Knitting");
+      assert.equal(redTeammate.id, 16);
+      assert.equal(redTeammate.name, "Rick Martinez");
+      assert.equal(redTeammate.age, 32);
+      assert.equal(redTeammate.skillSet, "Knitting");
+    })
+  })
+}
+
+if (typeof describe === "function") {
+  describe("Blue Team Member", function() {
+    it("should have a id, name, age, skillset.", function() {
+      var blueTeammate = new BlueTeammate(16, "Rick Martinez", 32, "Knitting");
+      assert.equal(blueTeammate.id, 16);
+      assert.equal(blueTeammate.name, "Rick Martinez");
+      assert.equal(blueTeammate.age, 32);
+      assert.equal(blueTeammate.skillSet, "Knitting");
+    })
+  })
+}

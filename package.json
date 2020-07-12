@@ -1,0 +1,23 @@
+{
+  "name": "dodgeball",
+  "version": "1.0.0",
+  "description": "1. Create array and classes for:\r      \"people\"\r      \"players\"\r      \"teams\"\r 2. Move people > players > teams",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctamez17/dodgeball.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ctamez17/dodgeball/issues"
+  },
+  "homepage": "https://github.com/ctamez17/dodgeball#readme"
+}
