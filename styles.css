@@ -1,0 +1,49 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+}
+
+button
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: #999999;
+    /* width: 75px; */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 5px;
+    margin: 5px 5px;
+}
+
+#blueHead
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: #4298f5;
+    width: 150px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#redHead
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f54242; /* Green */
+    width: 150px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+h4{
+    font-weight: bold;
+}
